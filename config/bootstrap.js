@@ -16,6 +16,15 @@ module.exports.bootstrap = async function() {
   // For example:
   // ```
   // // Set up fake development data (or if we already have some, avast)
+  if (await User.count() > 0) {
+    return;
+  }
+  
+  await User.createEach([
+    { username: 'Shashan', password: 'test123', email: 'shashan@gmail.com'}
+    // etc.
+  ]);
+
   if (await Category.count() > 0) {
     return;
   }

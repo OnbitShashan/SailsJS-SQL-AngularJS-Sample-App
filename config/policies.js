@@ -18,5 +18,9 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
-
+  ProductController: {
+    'editProductById': 'isAuthenticated',
+    'createProduct': 'isAuthenticated',
+    'deleteProductById': 'isAuthenticated'
+ }
 };

@@ -12,7 +12,7 @@ module.exports = {
 
         var products;
         try {
-            products = await Product.find();
+            products = await Product.find().populate('category').populate('merchant');
         } catch (err) {
             switch (err.name) {
                 case 'UsageError': return res.badRequest(err);
@@ -35,7 +35,7 @@ module.exports = {
         try {
             product = await Product.findOne({
                 id: req.param('productId')
-            });
+            }).populate('category').populate('merchant');
         } catch (err) {
             switch (err.name) {
                 case 'UsageError': return res.badRequest(err);

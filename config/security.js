@@ -27,13 +27,13 @@ module.exports.security = {
   * https://sailsjs.com/docs/concepts/security/cors                          *
   *                                                                          *
   ***************************************************************************/
-
-  // cors: {
-  //   allRoutes: false,
-  //   allowOrigins: '*',
-  //   allowCredentials: false,
-  // },
-
+  cors: {
+    allRoutes: true,
+    allowOrigins: '*',
+    allowCredentials: false,
+    allowRequestHeaders: 'content-type, authorization, Access-Control-Allow-Origin,If-Modified-Since',
+    allowRequestMethods: 'GET,PUT,POST,OPTIONS,HEAD'
+  }
 
   /****************************************************************************
   *                                                                           *

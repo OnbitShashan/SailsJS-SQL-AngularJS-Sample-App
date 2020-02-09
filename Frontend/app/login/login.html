@@ -1,0 +1,17 @@
+<form class="container form-signin pt-5 m-5" ng-submit="login(user)">
+    <h1 class="h3 mb-3 font-weight-normal">Product Management</h1>
+
+    <div class="pb-2">
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" 
+            placeholder="Email address" required autofocus ng-model="user.username">
+    </div>
+    <div  class="pb-2">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" 
+            placeholder="Password" required ng-model="user.password">
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+      

@@ -1,0 +1,39 @@
+<div class="p-4">
+    <input type="search" class="form-control ds-input " id="search-input" placeholder="Search Product..." aria-label="Search for..."  spellcheck="false" role="combobox" ng-model="search.title">
+</div>
+<table class="table table-striped m-2">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Images</th>
+        <th scope="col">Price</th>
+        <th scope="col">msrp</th>
+        <th scope="col">Availablie</th>
+        <th scope="col">description</th>
+        <th scope="col">Category</th>
+        <th scope="col">Merchant</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delte</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in products | filter:search:strict"" >
+            <th scope="row">{{product.id}}</th>
+            <td><a href="{{product.url}}" target="_blank">{{product.title}}</a></td>
+            <td>
+                <div ng-repeat="image in product.images">
+                    <img src="{{image}} " width="100px">
+                </div>
+            </td>
+            <td>{{product.price}}</td>
+            <td>{{product.msrp}}</td>
+            <td>{{product.available}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.category.title}}</td>
+            <td>{{product.merchant.title}}</td>
+            <td><button class="btn btn-dark" ng-click="editProduct(product.id)">Edit</button></td>
+            <td><button class="btn btn-dark" ng-click="deleteProductModal(product.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

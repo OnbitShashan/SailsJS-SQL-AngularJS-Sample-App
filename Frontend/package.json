@@ -1,0 +1,23 @@
+{
+  "name": "Frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "copy-libs": "cpx \"node_modules/{angular,angular-*}/**/*\" app/lib -C",
+    "prestart": "npm run copy-libs",
+    "start": "http-server -a localhost -p 8000 -c-1 ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.25",
+    "angular": "^1.7.9",
+    "angular-route": "^1.7.9"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "http-server": "^0.11.1"
+  }
+}

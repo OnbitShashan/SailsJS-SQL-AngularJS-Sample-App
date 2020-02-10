@@ -7,11 +7,37 @@ angular.module('myApp', [
 
 .constant('SERVER_URL', 'http://localhost:1337')
 
+.run(['$rootScope', '$location', 'AuthService', function ($rootScope, $location, AuthService) {
+  $rootScope.$on('$routeChangeStart', function (event, next) {
+    if (!AuthService.checkPermissionForView(next)){
+        console.log("No Access!")
+        event.preventDefault();
+        $location.path("/");
+    }
+  });
+}])
+
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider
-  .when('/product' , {templateUrl: 'product/products.html',  controller: 'ProductController'})
-  .when('/product/:id' , {templateUrl: 'product/edit/editProduct.html',  controller: 'EditProductController'})
-  .when('/', {templateUrl: 'login/login.html', controller: 'LoginController'})
+
+  .when('/product' , {
+    templateUrl: 'product/products.html',  
+    controller: 'ProductController',
+    requiresAuthentication: true
+  })
+
+  .when('/product/:id' , {
+    templateUrl: 'product/addEdit/addEditProduct.html',  
+    controller: 'AddEditProductController',
+    requiresAuthentication: true
+  })
+
+  .when('/', {
+    templateUrl: 'login/login.html', 
+    controller: 'LoginController'
+  })
+
   $routeProvider.otherwise('/');
   // $locationProvider.html5Mode(true);
 }]);
+

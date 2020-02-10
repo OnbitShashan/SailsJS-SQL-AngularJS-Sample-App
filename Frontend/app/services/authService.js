@@ -10,7 +10,20 @@
         return {
             login: function(data){
                 return $http.post(`${SERVER_URL}/user/login`,data);
-            }
+            },
+
+             
+            checkPermissionForView: function(view) {
+                if (!view.requiresAuthentication) {
+                    return true;
+                }
+                
+                if (localStorage.getItem('user')) {
+                    return true;
+                }else{
+                    return false;
+                }
+            },
         }
     }
 })();

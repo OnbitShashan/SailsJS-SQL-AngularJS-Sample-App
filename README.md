@@ -1,8 +1,8 @@
-# sails-maybank
+# About 
 
 This is a Combination of SailsJS and AngularJS Separately. 
 
-# tech
+# Tech
 
 Techstack, dependencies, frameworks
 
@@ -12,6 +12,6 @@ Techstack, dependencies, frameworks
 + AngularJS 1^
 + Bootstrap 4.4
 
-# extra
- 
+# Extra
+
 For backend and frontend it has own readme file to get them up and running :)

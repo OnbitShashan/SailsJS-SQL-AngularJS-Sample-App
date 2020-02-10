@@ -1,19 +1,15 @@
-# Backend
+# Frontend
 
-a [Sails v1](https://sailsjs.com) application with MySQL
-
-### Version info
-
-This app was originally generated on Sun Feb 09 2020 11:04:48 GMT+0530 (Sri Lanka Standard Time) using Sails v1.2.3.
+a [AngularJS 1](https://angularjs.org/) application with [Bootstrap 4](https://getbootstrap.com/docs/4.4/)
 
 ### Get Started
 
-+ $ npm install sails -g
-+ $ npm install
-+ make a database named "testdatabase" in mysql (You can always change this in config/datastores.js)
-+ $ sails lift
-+ navigate to [http://localhost:1337](http://localhost:1337)
-
++ $ npm install http-server -g
++ $ npm start
++ navigate to [http://localhost:8000](http://localhost:8000)
++ If it does not work onyl run below command
++ $ http-server -a localhost -p 8000 -c-1 ./app
++ Loging using Username: Test , Password: test123
 <!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
 
 

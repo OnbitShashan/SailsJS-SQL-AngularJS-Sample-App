@@ -6,7 +6,7 @@
   "scripts": {
     "copy-libs": "cpx \"node_modules/{angular,angular-*}/**/*\" app/lib -C",
     "prestart": "npm run copy-libs",
-    "start": "http-server -a localhost -p 8000 -c-1 ./"
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
   },
   "keywords": [],
   "author": "",

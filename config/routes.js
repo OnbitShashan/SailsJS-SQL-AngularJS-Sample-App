@@ -12,10 +12,11 @@ module.exports.routes = {
 
     //produt
     'GET /product/:productId': 'ProductController.getProductById',
-    'PUT /product/:productId': 'ProductController.editProductById',
+    'PUT /product/:productId': 'ProductController.updateProductById',
     'DELETE /product/:productId': 'ProductController.deleteProductById',
     'POST /product/add': 'ProductController.createProduct',
     'GET /product/all': 'ProductController.getAllProducts',
+    'GET /product/getAllCategoriesAndMerchants': 'ProductController.getAllCategoriesAndMerchants',
 
     //user 
     'POST /user/login': 'AuthController.login'

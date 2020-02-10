@@ -1,5 +1,5 @@
 {
-  "_from": "angular@^1",
+  "_from": "angular@^1.7.9",
   "_id": "angular@1.7.9",
   "_inBundle": false,
   "_integrity": "sha512-5se7ZpcOtu0MBFlzGv5dsM1quQDoDeUTwZrWjGtTNA7O88cD8TEk5IEKCTDa3uECV9XnvKREVUr7du1ACiWGFQ==",
@@ -8,21 +8,20 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "angular@^1",
+    "raw": "angular@^1.7.9",
     "name": "angular",
     "escapedName": "angular",
-    "rawSpec": "^1",
+    "rawSpec": "^1.7.9",
     "saveSpec": null,
-    "fetchSpec": "^1"
+    "fetchSpec": "^1.7.9"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/angular/-/angular-1.7.9.tgz",
   "_shasum": "e52616e8701c17724c3c238cfe4f9446fd570bc4",
-  "_spec": "angular@^1",
-  "_where": "D:\\personal work\\sails-maybank\\Frontend",
+  "_spec": "angular@^1.7.9",
+  "_where": "D:\\Personal Work\\SailsJS-SQL-AngularJS-Sample-App\\Frontend",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"

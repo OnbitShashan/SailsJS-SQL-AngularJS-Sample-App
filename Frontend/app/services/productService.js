@@ -20,14 +20,16 @@
                 return $http.delete(`${SERVER_URL}/product/${productId}`);
             },
 
-            editProductById: function(productId){
-                return $http.put(`${SERVER_URL}/product/${productId}`);
+            updateProductById: function(productId, data){
+                return $http.put(`${SERVER_URL}/product/${productId}`, data);
             },
 
             getProductById: function(productId){
                 return $http.get(`${SERVER_URL}/product/${productId}`);
+            },
+            getAllCategoriesAndMerchants: function(){
+                return $http.get(`${SERVER_URL}/product/getAllCategoriesAndMerchants`);
             }
-
 
         }
     }

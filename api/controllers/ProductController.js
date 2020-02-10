@@ -52,7 +52,7 @@ module.exports = {
         return res.json(product);
     },
 
-    editProductById: async function(req, res){
+    updateProductById: async function(req, res){
     
         var updatedProduct;
         try {
@@ -107,6 +107,23 @@ module.exports = {
         }
 
         return res.json(destroyedProduct);
+    },
+
+
+    getAllCategoriesAndMerchants: async function(req, res){
+
+        let categories, merchants;
+        try {
+            categories = await Category.find();
+            merchants = await Merchant.find();
+        } catch (err) {
+            switch (err.name) {
+                case 'UsageError': return res.badRequest(err);
+                default: throw err;
+            }
+        }
+
+        return res.json({categories: categories, merchants: merchants});
     }
 };
 

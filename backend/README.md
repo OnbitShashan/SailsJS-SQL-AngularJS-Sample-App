@@ -12,7 +12,6 @@ This app was originally generated on Sun Feb 09 2020 11:04:48 GMT+0530 (Sri Lank
 + $ npm install
 + make a database named "testdatabase" in mysql (You can always change this in config/datastores.js)
 + $ sails lift
-+ navigate to [http://localhost:1337](http://localhost:1337)
 
 <!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
 

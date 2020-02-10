@@ -21,7 +21,7 @@ module.exports.bootstrap = async function() {
   }
   
   await User.createEach([
-    { username: 'Test', password: 'test123', email: 'shashan@gmail.com'}
+    { username: 'Test', password: 'test123', email: 'test@gmail.com'}
     // etc.
   ]);
 
